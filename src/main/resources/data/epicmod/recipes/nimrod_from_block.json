@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "epicmod:nimrod_block"
+    }
+  ],
+  "result": {
+    "item": "epicmod:nimrod",
+    "count": 9
+  }
+}
