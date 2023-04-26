@@ -2,6 +2,7 @@ package me.notbanana8.epicmod;
 
 import me.notbanana8.epicmod.block.ModBlocks;
 import me.notbanana8.epicmod.entity.ModEntities;
+import me.notbanana8.epicmod.entity.custom.KarinEntity;
 import me.notbanana8.epicmod.entity.custom.NimrodEntity;
 import me.notbanana8.epicmod.item.ModItemGroup;
 import me.notbanana8.epicmod.item.ModItems;
@@ -27,5 +28,6 @@ public class EpicMod implements ModInitializer {
 		ModItems.registerItems();
 
 		FabricDefaultAttributeRegistry.register(ModEntities.NIMROD,NimrodEntity.setAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.KARIN, KarinEntity.setAttributes());
 	}
 }
