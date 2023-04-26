@@ -1,6 +1,6 @@
-package me.notbanana8.epicmod;
+package me.notbanana8.epicmod.item;
 
-import me.notbanana8.epicmod.item.ModItems;
+import me.notbanana8.epicmod.EpicMod;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
@@ -21,6 +21,7 @@ public class ModItemGroup {
     public static  void addItemToItemGroup(){
         addToItemGroup(ModItemGroup.NIMROD, ModItems.NIMROD);
         addToItemGroup(ModItemGroup.NIMROD, ModItems.BANANA);
+        addToItemGroup(ModItemGroup.NIMROD,ModItems.NIMROD_SPAWN_EGG);
     }
     public static void addToItemGroup(ItemGroup group, Item item){
         ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));

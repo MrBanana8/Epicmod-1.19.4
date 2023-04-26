@@ -1,7 +1,7 @@
 package me.notbanana8.epicmod.block;
 
 import me.notbanana8.epicmod.EpicMod;
-import me.notbanana8.epicmod.ModItemGroup;
+import me.notbanana8.epicmod.item.ModItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
