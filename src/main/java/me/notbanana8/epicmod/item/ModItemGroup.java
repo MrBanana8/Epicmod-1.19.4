@@ -22,6 +22,7 @@ public class ModItemGroup {
         addToItemGroup(ModItemGroup.NIMROD, ModItems.NIMROD);
         addToItemGroup(ModItemGroup.NIMROD, ModItems.BANANA);
         addToItemGroup(ModItemGroup.NIMROD,ModItems.NIMROD_SPAWN_EGG);
+        addToItemGroup(ModItemGroup.NIMROD,ModItems.KARIN_SPAWN_EGG);
     }
     public static void addToItemGroup(ItemGroup group, Item item){
         ItemGroupEvents.modifyEntriesEvent(group).register(entries -> entries.add(item));

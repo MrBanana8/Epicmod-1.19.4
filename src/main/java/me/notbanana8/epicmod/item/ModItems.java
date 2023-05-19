@@ -18,6 +18,10 @@ public class ModItems {
             new SpawnEggItem(ModEntities.NIMROD, 0xf8ad86, 0xFFC0CB,
                     new FabricItemSettings()));
 
+    public static final Item KARIN_SPAWN_EGG = registerItem("karin_spawn_egg",
+            new SpawnEggItem(ModEntities.KARIN, 0x121111, 0xb53636,
+                    new FabricItemSettings()));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(EpicMod.MOD_ID, name), item);
     }

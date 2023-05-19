@@ -8,7 +8,6 @@ import me.notbanana8.epicmod.item.ModItemGroup;
 import me.notbanana8.epicmod.item.ModItems;
 import me.notbanana8.epicmod.sound.ModSounds;
 import net.fabricmc.api.ModInitializer;
-
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
