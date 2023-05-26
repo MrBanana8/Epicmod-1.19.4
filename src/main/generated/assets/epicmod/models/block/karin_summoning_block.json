@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "epicmod:block/karin_summoning_block"
+  }
+}

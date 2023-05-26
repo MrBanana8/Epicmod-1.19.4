@@ -34,6 +34,7 @@ public class KarinSpawnEntity extends Entity {
             t++;
             if(t == 100) {
                 spawned = true;
+                karin.setPosition(getX(),getY()+1,getZ());
                 world.spawnEntity(karin);
                 this.remove(RemovalReason.DISCARDED);
                 t = 0;
@@ -47,7 +48,7 @@ public class KarinSpawnEntity extends Entity {
             }
 
             if(t % 20 == 0){
-                this.world.playSound(closestPlayer,this.getBlockPos(), SoundEvents.ENTITY_ARMOR_STAND_HIT, SoundCategory.HOSTILE, 5F,0);}
+                this.world.playSound(closestPlayer,this.getBlockPos(), SoundEvents.ENTITY_CHICKEN_EGG, SoundCategory.HOSTILE, 5F,0);}
             else if (t == 99) {
                 this.world.playSound(closestPlayer,this.getBlockPos(),SoundEvents.ENTITY_ENDER_DRAGON_AMBIENT,
                         SoundCategory.HOSTILE, 1F,2);

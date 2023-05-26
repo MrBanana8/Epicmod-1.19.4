@@ -14,6 +14,7 @@ import net.minecraft.util.Identifier;
 public class ModItems {
     public static final Item BANANA = new Item(new Item.Settings().maxCount(16).food(FoodComponents.BEEF));
     public static final Item NIMROD = new Nimrod(new Item.Settings());
+    public static final Item HAT = new Hat(new FabricItemSettings().maxCount(1));
     public static final Item NIMROD_SPAWN_EGG = registerItem("nimrod_spawn_egg",
             new SpawnEggItem(ModEntities.NIMROD, 0xf8ad86, 0xFFC0CB,
                     new FabricItemSettings()));
@@ -31,5 +32,6 @@ public class ModItems {
         EpicMod.LOGGER.info("Registering Mod Items for " + EpicMod.MOD_ID);
         Registry.register(Registries.ITEM,new Identifier(EpicMod.MOD_ID, "banana"), BANANA);
         Registry.register(Registries.ITEM,new Identifier(EpicMod.MOD_ID, "nimrod"), NIMROD);
+        Registry.register(Registries.ITEM,new Identifier(EpicMod.MOD_ID, "hat"), HAT);
     }
 }

@@ -17,6 +17,8 @@ import net.minecraft.util.Identifier;
 public class ModBlocks {
     public static final Block NIMROD_BLOCK = registerBlock("nimrod_block",
             new Block(FabricBlockSettings.of(Material.METAL).requiresTool().strength(5.0f, 6.0f)), ModItemGroup.NIMROD);
+    public static final Block KARIN_SUMMONING_BLOCK = registerBlock("karin_summoning_block",
+            new SummoningBlock(FabricBlockSettings.of(Material.MOSS_BLOCK).strength(0.5F)), ModItemGroup.NIMROD);
 
     private static Block registerBlock(String name, Block block, ItemGroup group){
         registerBlockItem(name, block, group);

@@ -17,6 +17,7 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.NIMROD_BLOCK);
+        blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.KARIN_SUMMONING_BLOCK);
         blockStateModelGenerator.registerParentedItemModel(ModItems.NIMROD_SPAWN_EGG,ModelIds.getMinecraftNamespacedItem("template_spawn_egg"));
         blockStateModelGenerator.registerParentedItemModel(ModItems.KARIN_SPAWN_EGG,ModelIds.getMinecraftNamespacedItem("template_spawn_egg"));
     }
@@ -25,6 +26,5 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.BANANA, Models.GENERATED);
         itemModelGenerator.register(ModItems.NIMROD, Models.GENERATED);
-
     }
 }

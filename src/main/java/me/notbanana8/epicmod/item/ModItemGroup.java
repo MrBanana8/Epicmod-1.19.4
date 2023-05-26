@@ -21,6 +21,7 @@ public class ModItemGroup {
     public static  void addItemToItemGroup(){
         addToItemGroup(ModItemGroup.NIMROD, ModItems.NIMROD);
         addToItemGroup(ModItemGroup.NIMROD, ModItems.BANANA);
+        addToItemGroup(ModItemGroup.NIMROD, ModItems.HAT);
         addToItemGroup(ModItemGroup.NIMROD,ModItems.NIMROD_SPAWN_EGG);
         addToItemGroup(ModItemGroup.NIMROD,ModItems.KARIN_SPAWN_EGG);
     }

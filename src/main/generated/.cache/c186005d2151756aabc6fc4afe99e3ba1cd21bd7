@@ -1,8 +1,11 @@
-// 1.19.4	2023-04-29T11:48:22.307393	EpicMod/Model Definitions
+// 1.19.4	2023-05-26T15:00:56.4878857	EpicMod/Model Definitions
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets\epicmod\models\item\karin_spawn_egg.json
 cf171614e324c6643e5816f42a93f651359b4ad8 assets\epicmod\models\block\nimrod_block.json
+356507b1651c7b588c79e16d6e4b6504d2561bd3 assets\epicmod\models\item\karin_summoning_block.json
 035db8285b3d062bc5cbf2972f6a16e4f1369c97 assets\epicmod\models\item\banana.json
 74f6590f61fc813085d65f545cca196a546bbf70 assets\epicmod\models\item\nimrod_block.json
 e098369a3f41a4e234f0de061dd8b3b72810f47f assets\epicmod\blockstates\nimrod_block.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets\epicmod\models\item\nimrod_spawn_egg.json
+fc7dad3ec6cbccfc34aa8b61435b9ee5397a147b assets\epicmod\blockstates\karin_summoning_block.json
+c667e093d6bcb77066aa9ce340744306a688b0a5 assets\epicmod\models\block\karin_summoning_block.json
 28a59d585fdcc01b804946a9ac71e138583c94d8 assets\epicmod\models\item\nimrod.json

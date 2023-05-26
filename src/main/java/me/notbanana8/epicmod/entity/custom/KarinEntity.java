@@ -11,6 +11,8 @@ import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.boss.BossBar;
 import net.minecraft.entity.boss.ServerBossBar;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.passive.AnimalEntity;
 import net.minecraft.entity.passive.MerchantEntity;
@@ -28,13 +30,12 @@ import software.bernie.geckolib.core.object.PlayState;
 
 public class KarinEntity extends HostileEntity implements GeoEntity, RangedAttackMob {
     boolean temp = false;
-    private Goal currentAttackGoal;
     private final AnimatableInstanceCache cache = new SingletonAnimatableInstanceCache(this);
-    private final ServerBossBar bossBar = (ServerBossBar)new ServerBossBar(this.getDisplayName(), BossBar.Color.GREEN, BossBar.Style.PROGRESS).setDarkenSky(true);
+    private final ServerBossBar bossBar = (ServerBossBar) new ServerBossBar(this.getDisplayName(), BossBar.Color.GREEN, BossBar.Style.PROGRESS).setDarkenSky(true);
 
-    public KarinEntity(World world,double x, double y, double z) {
-        super(ModEntities.KARIN,world);
-        this.setPosition(x,y,z);
+    public KarinEntity(World world, double x, double y, double z) {
+        super(ModEntities.KARIN, world);
+        this.setPosition(x, y, z);
     }
 
     public KarinEntity(EntityType<? extends HostileEntity> entityType, World world) {
@@ -42,19 +43,19 @@ public class KarinEntity extends HostileEntity implements GeoEntity, RangedAttac
     }
 
 
-    public static DefaultAttributeContainer.Builder setAttributes(){
+    public static DefaultAttributeContainer.Builder setAttributes() {
         return AnimalEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 100f)
-                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE,20.0f)
-                .add(EntityAttributes.GENERIC_ATTACK_SPEED,10.0f)
-                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED,0.4f)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 250f)
+                .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 20.0f)
+                .add(EntityAttributes.GENERIC_ATTACK_SPEED, 10.0f)
+                .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.25f)
                 .add(EntityAttributes.GENERIC_KNOCKBACK_RESISTANCE, 1f);
     }
 
     @Override
     protected void initGoals() {
         goalSelector.add(0, new SwimGoal(this));
-        goalSelector.add(1, new ProjectileAttackGoal(this, 1.0, 40, 20.0f));
+        goalSelector.add(1, new ProjectileAttackGoal(this, 1.0, 20, 20.0f));
         goalSelector.add(3, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
         goalSelector.add(3, new WanderAroundFarGoal(this, 1.0D));
 
@@ -67,24 +68,25 @@ public class KarinEntity extends HostileEntity implements GeoEntity, RangedAttac
     public void tick() {
         super.tick();
         initCustomGoals();
-        this.bossBar.setPercent(this.getHealth()/this.getMaxHealth());
+        this.bossBar.setPercent(this.getHealth() / this.getMaxHealth());
     }
 
     private void initCustomGoals(){
-        Goal meleeGoal = new MeleeAttackGoal(this, 1.0, true);
-        Goal projectileGoal = new ProjectileAttackGoal(this, 1.0, 40, 20.0f);
 
-        if (this.getTarget() != null) {
-            if (this.getHealth() <= this.getMaxHealth()/2) {
-                goalSelector.remove(projectileGoal);
-                goalSelector.add(1, meleeGoal);
-                EpicMod.LOGGER.info("Projectile goal");
+        if(this.getTarget() != null){
+            if(this.getHealth() <= this.getMaxHealth()/2 && temp == false){
+                goalSelector.remove(new ProjectileAttackGoal(this, 1.0, 20, 20.0f));
+                goalSelector.add(0, new MeleeAttackGoal(this, 1.0, true));
+                this.setPositionTarget(this.getTarget().getBlockPos(),5);
+                temp = true;
+                EpicMod.LOGGER.info("projectile goal");
             }
-            //} else if (this.distanceTo(this.getTarget()) <= 10.0 && !(currentAttackGoal instanceof MeleeAttackGoal)) {
+            //else if (this.distanceTo(this.getTarget()) <= 10.0 && melee == false){
             //    goalSelector.remove(projectileGoal);
             //    goalSelector.add(1, meleeGoal);
-            //    currentAttackGoal = meleeGoal;
-            //    EpicMod.LOGGER.info("Melee goal");
+            //    melee = true;
+            //    projectile = false;
+            //    EpicMod.LOGGER.info("melee goal");
             //}
         }
     }
@@ -151,7 +153,7 @@ public class KarinEntity extends HostileEntity implements GeoEntity, RangedAttac
 
     @Override
     public void attack(LivingEntity target, float pullProgress) {
-        if (target != null && this.canSee(target) && temp == true) {
+        if (target != null && this.canSee(target)) {
             this.shootAt(target);
         }
     }

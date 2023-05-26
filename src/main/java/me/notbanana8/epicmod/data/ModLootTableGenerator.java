@@ -12,5 +12,8 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
         addDrop(ModBlocks.NIMROD_BLOCK);
+        addDrop(ModBlocks.KARIN_SUMMONING_BLOCK);
+
+
     }
 }
