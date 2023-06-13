@@ -143,10 +143,10 @@ public class KarinEntity extends HostileEntity implements GeoEntity, RangedAttac
         Vec3d targetPos = target.getEyePos();
         Vec3d shootDirection = targetPos.subtract(shooterPos).normalize();
 
-        KarinProjectile proj = new KarinProjectile(this.world,shootDirection.getX(),shootDirection.getY(),shootDirection.getZ());
+        KarinProjectile proj = new KarinProjectile(this.getWorld(),shootDirection.getX(),shootDirection.getY(),shootDirection.getZ());
         proj.updatePosition(this.getX(), this.getEyeY(), this.getZ());
         proj.setVelocity(shootDirection);
-        this.world.spawnEntity(proj);
+        this.getWorld().spawnEntity(proj);
     }
 
     @Override

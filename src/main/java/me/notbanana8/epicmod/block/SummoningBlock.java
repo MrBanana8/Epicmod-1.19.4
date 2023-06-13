@@ -16,7 +16,6 @@ import net.minecraft.predicate.block.BlockStatePredicate;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
-import net.minecraft.util.function.MaterialPredicate;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
@@ -32,8 +31,6 @@ public class SummoningBlock extends HorizontalFacingBlock
     private static final Predicate<BlockState> IS_KARIN_HEAD_PREDICATE = state -> state != null && (state.isOf(ModBlocks.KARIN_SUMMONING_BLOCK));
     @Nullable
     private BlockPattern karinPattern;
-    @Nullable
-    private BlockPattern karinFloorPattern;
 
     public SummoningBlock(AbstractBlock.Settings settings) {
         super(settings);
@@ -109,7 +106,7 @@ public class SummoningBlock extends HorizontalFacingBlock
                     "-#-")
                     .where('^', CachedBlockPosition.matchesBlockState(IS_KARIN_HEAD_PREDICATE))
                     .where('#', CachedBlockPosition.matchesBlockState(BlockStatePredicate.forBlock(Blocks.BASALT)))
-                    .where('-', CachedBlockPosition.matchesBlockState(MaterialPredicate.create(Material.AIR))).build();
+                    .where('-', CachedBlockPosition.matchesBlockState(BlockStatePredicate.forBlock(Blocks.AIR))).build();
         }
         return this.karinPattern;
     }
