@@ -5,7 +5,6 @@ import me.notbanana8.epicmod.entity.ModEntities;
 import me.notbanana8.epicmod.entity.custom.ExplosiveRabbit;
 import me.notbanana8.epicmod.entity.custom.KarinEntity;
 import me.notbanana8.epicmod.entity.custom.NimrodEntity;
-import me.notbanana8.epicmod.item.Hat;
 import me.notbanana8.epicmod.item.ModItemGroup;
 import me.notbanana8.epicmod.item.ModItems;
 import me.notbanana8.epicmod.sound.ModSounds;
