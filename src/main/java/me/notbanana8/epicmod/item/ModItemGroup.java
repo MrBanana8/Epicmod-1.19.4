@@ -23,6 +23,7 @@ public class ModItemGroup {
 
                         entries.add(ModBlocks.NIMROD_BLOCK);
                         entries.add(ModBlocks.KARIN_SUMMONING_BLOCK);
+                        entries.add(ModBlocks.NIMROD_ORE);
                     }).build());
 
     public static void registerItemGroups(){

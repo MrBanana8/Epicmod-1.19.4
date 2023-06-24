@@ -2,14 +2,13 @@ package me.notbanana8.epicmod.item;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import me.notbanana8.epicmod.EpicMod;
-import me.notbanana8.epicmod.entity.ModEntities;
-import me.notbanana8.epicmod.entity.custom.ExplosiveRabbit;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.client.render.GameRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.RabbitEntity;
@@ -62,8 +61,7 @@ public class Hat extends Item implements Equipment {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         if (!world.isClient && counter > 0 && counter <= 10) {
             Vec3d lookDir = user.getRotationVector().multiply(1.5);
-
-            ExplosiveRabbit rabbit = new ExplosiveRabbit(ModEntities.EXPLOSIVE_RABBIT,world);
+            RabbitEntity rabbit = new RabbitEntity(EntityType.RABBIT,world);
             rabbit.setPosition(user.getX(),user.getEyeY(),user.getZ());
             rabbit.setVelocity(lookDir.x, lookDir.y, lookDir.z);
 

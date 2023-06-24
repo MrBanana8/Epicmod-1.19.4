@@ -24,9 +24,10 @@ public class ModRecipeGenerator extends FabricRecipeProvider {
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC,ModBlocks.KARIN_SUMMONING_BLOCK)
                 .pattern("NNN")
+                .pattern("NSN")
                 .pattern("NNN")
-                .pattern("NNN")
-                .input('N', Items.NETHER_STAR)
+                .input('S', Items.NETHER_STAR)
+                .input('N', ModItems.NIMROD)
                 .criterion(FabricRecipeProvider.hasItem(Items.NETHER_STAR),
                         FabricRecipeProvider.conditionsFromItem(Items.NETHER_STAR))
                 .offerTo(exporter,new Identifier(FabricRecipeProvider.getRecipeName(ModBlocks.KARIN_SUMMONING_BLOCK)));

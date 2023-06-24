@@ -3,12 +3,15 @@
   "category": "misc",
   "key": {
     "N": {
+      "item": "epicmod:nimrod"
+    },
+    "S": {
       "item": "minecraft:nether_star"
     }
   },
   "pattern": [
     "NNN",
-    "NNN",
+    "NSN",
     "NNN"
   ],
   "result": {

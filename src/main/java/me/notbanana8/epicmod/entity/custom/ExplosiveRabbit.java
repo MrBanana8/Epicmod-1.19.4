@@ -6,13 +6,19 @@ import net.minecraft.entity.passive.RabbitEntity;
 import net.minecraft.world.World;
 
 
-public class ExplosiveRabbit extends RabbitEntity{
+public class ExplosiveRabbit extends RabbitEntity {
+
     public ExplosiveRabbit(EntityType<? extends RabbitEntity> entityType, World world) {
         super(entityType, world);
     }
 
     public static DefaultAttributeContainer.Builder setAttributes() {
         return RabbitEntity.createRabbitAttributes();
+    }
+
+    @Override
+    protected void initDataTracker() {
+
     }
 
     @Override

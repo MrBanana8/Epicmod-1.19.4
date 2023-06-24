@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "epicmod:nimrod_block"
+    "epicmod:nimrod_block",
+    "epicmod:nimrod_ore"
   ]
 }

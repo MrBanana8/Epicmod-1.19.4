@@ -13,7 +13,6 @@ public class ModLootTableGenerator extends FabricBlockLootTableProvider {
     public void generate() {
         addDrop(ModBlocks.NIMROD_BLOCK);
         addDrop(ModBlocks.KARIN_SUMMONING_BLOCK);
-
-
+        copperOreDrops(ModBlocks.NIMROD_ORE);
     }
 }
