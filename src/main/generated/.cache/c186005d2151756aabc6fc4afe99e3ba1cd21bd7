@@ -1,11 +1,16 @@
-// 1.20.1	2023-06-24T18:19:59.6231515	EpicMod/Model Definitions
+// 1.20.1	2023-06-25T17:35:40.3008707	EpicMod/Model Definitions
 33e54ad82ed3747d70e74cddac2aed980367695c assets\epicmod\models\block\nimrod_ore.json
+129721ff4a22364f71e8e73fe27a7419fc25511c assets\epicmod\models\item\nimrod_pickaxe.json
 035db8285b3d062bc5cbf2972f6a16e4f1369c97 assets\epicmod\models\item\banana.json
+b36f4ea23980b646bf87863d7d9a562d0419768f assets\epicmod\models\item\nimrod_axe.json
+b143c8d10820dc3bdfb36c2ded531aebdf656ea0 assets\epicmod\models\item\nimrod_hoe.json
 c667e093d6bcb77066aa9ce340744306a688b0a5 assets\epicmod\models\block\karin_summoning_block.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets\epicmod\models\item\karin_spawn_egg.json
 cf171614e324c6643e5816f42a93f651359b4ad8 assets\epicmod\models\block\nimrod_block.json
 356507b1651c7b588c79e16d6e4b6504d2561bd3 assets\epicmod\models\item\karin_summoning_block.json
 058394631a134f26421c2a9dd467587b08cb464d assets\epicmod\blockstates\nimrod_ore.json
+bbb1f1f5c3688ffb7ea10422762331e5289ccd48 assets\epicmod\models\item\nimrod_shovel.json
+79da8b6ea85a3336a2068c58cdcb41bf09676542 assets\epicmod\models\item\nimrod_sword.json
 74f6590f61fc813085d65f545cca196a546bbf70 assets\epicmod\models\item\nimrod_block.json
 e098369a3f41a4e234f0de061dd8b3b72810f47f assets\epicmod\blockstates\nimrod_block.json
 620254a3e0b8441634f9cf08b363d3f884a5e113 assets\epicmod\models\item\nimrod_ore.json

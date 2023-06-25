@@ -10,7 +10,6 @@ import me.notbanana8.epicmod.sound.ModSounds;
 import me.notbanana8.epicmod.world.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
-import net.minecraft.entity.passive.RabbitEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -30,7 +29,5 @@ public class EpicMod implements ModInitializer {
 		ModWorldGeneration.generateModWorldGen();
 
 		FabricDefaultAttributeRegistry.register(ModEntities.NIMROD,NimrodEntity.setAttributes());
-		FabricDefaultAttributeRegistry.register(ModEntities.KARIN, KarinEntity.setAttributes());
-		FabricDefaultAttributeRegistry.register(ModEntities.EXPLOSIVE_RABBIT, RabbitEntity.createRabbitAttributes());
-	}
+		FabricDefaultAttributeRegistry.register(ModEntities.KARIN, KarinEntity.setAttributes());}
 }

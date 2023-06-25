@@ -5,7 +5,6 @@ import me.notbanana8.epicmod.entity.client.KarinSpawnEntityRenderer;
 import me.notbanana8.epicmod.entity.client.KarinRenderer;
 import me.notbanana8.epicmod.entity.client.KarinProjRenderer;
 import me.notbanana8.epicmod.entity.client.NimrodRenderer;
-import me.notbanana8.epicmod.entity.custom.ExplosiveRabbitRenderer;
 import me.notbanana8.epicmod.item.Hat;
 import me.notbanana8.epicmod.item.ModItems;
 import net.fabricmc.api.ClientModInitializer;

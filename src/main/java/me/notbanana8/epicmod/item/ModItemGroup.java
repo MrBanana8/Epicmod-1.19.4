@@ -24,6 +24,12 @@ public class ModItemGroup {
                         entries.add(ModBlocks.NIMROD_BLOCK);
                         entries.add(ModBlocks.KARIN_SUMMONING_BLOCK);
                         entries.add(ModBlocks.NIMROD_ORE);
+
+                        entries.add(ModItems.NIMROD_SWORD);
+                        entries.add(ModItems.NIMROD_PICKAXE);
+                        entries.add(ModItems.NIMROD_AXE);
+                        entries.add(ModItems.NIMROD_SHOVEL);
+                        entries.add(ModItems.NIMROD_HOE);
                     }).build());
 
     public static void registerItemGroups(){

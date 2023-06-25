@@ -27,5 +27,11 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.BANANA, Models.GENERATED);
         itemModelGenerator.register(ModItems.NIMROD, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.NIMROD_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.NIMROD_PICKAXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.NIMROD_AXE, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.NIMROD_SHOVEL, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.NIMROD_HOE, Models.HANDHELD);
     }
 }
